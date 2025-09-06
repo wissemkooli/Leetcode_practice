@@ -16,4 +16,26 @@ def GroupAnagrams1(strs):
 
     return res
 
+
+def GroupAnagrams2(strs):
+    d = {}
+    for s in strs:
+        key = ''.join(sorted(s))
+        if key not in d:
+            d[key] = []
+        d[key].append(s)
+    
+    return list(d.values())
+
+
+
+
+
+
+
+
+
+
+
 print(GroupAnagrams1(["eat","tea","tan","ate","nat","bat"]))
+print(GroupAnagrams2(["eat","tea","tan","ate","nat","bat"]))
